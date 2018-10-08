@@ -21,3 +21,27 @@ docker run --name openfire -d --restart=always --publish 9090:9090 --publish 52
 
 
 ___
+
+#### once the server is running, configure the following accounts:
+
+````
+sniper : sniper
+auction-item-54321 : auction
+auction-item-65432 : auction
+````
+
+
+___
+
+#### once the server is running, configure the following accounts:
+
+````
+sniper : sniper
+auction-item-54321 : auction
+auction-item-65432 : auction
+````
+
+
+___
+
+> We set it up to not store offline messages, which meant there was no persistent state. In the System Manager, we edited the “System Name” property to be localhost, so the tests would run consistently. Finally, we set the resource policy to “Never kick,” which will not allow a new resource to log in if there’s a conflict.
