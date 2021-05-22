@@ -7,7 +7,7 @@
 #### use the following docker image:
 
 ````
-docker pull gizmotronic/openfire:4.2.3
+docker pull gizmotronic/openfire:4.4.4
 
 ````
 
@@ -16,9 +16,8 @@ ___
 #### run it as follows:
 
 ````
-docker run --name openfire -d --restart=always --publish 9090:9090 --publish 5222:5222 --publish 7777:7777 --volume ~/git/wil/openfire:/var/lib/openfire gizmotronic/openfire:4.2.3
+docker run --name openfire -d --restart=always --publish 9090:9090 --publish 5222:5222 --publish 7777:7777 --volume ~/.openfire:/var/lib/openfire gizmotronic/openfire:4.4.4
 ````
-
 
 ___
 
