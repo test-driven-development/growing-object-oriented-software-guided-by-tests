@@ -6,38 +6,39 @@ import org.jmock.Expectations;
 import org.jmock.auto.Mock;
 import org.jmock.integration.junit4.JUnitRuleMockery;
 import org.junit.Rule;
-* */
 
 import com.auction.fakes.FakeAuctionServer;
+* */
+
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class AuctionSniperEndToEndTest {
-  private final FakeAuctionServer auction = new FakeAuctionServer("item-54321");
-  private final ApplicationRunner application = new ApplicationRunner();
-
   @Test
   public void canary() {
     assertThat(true).isEqualTo(true);
   }
 
-  @Test
-  public void sniperJoinsAuctionUntilAuctionCloses() throws Exception {
-    auction.startSellingItem();
-    application.startBiddingIn(auction);
-    auction.hasReceivedJoinRequestFromSniper();
-    auction.announceClosed();
-    application.showsSniperHasLostAuction();
-  }
+//  private final FakeAuctionServer auction = new FakeAuctionServer("item-54321");
+//  private final ApplicationRunner application = new ApplicationRunner();
 
-  // @After
-  public void stopAuction() {
-    auction.stop();
-  }
+//  @Test
+//  public void sniperJoinsAuctionUntilAuctionCloses() throws Exception {
+//    auction.startSellingItem();
+//    application.startBiddingIn(auction);
+//    auction.hasReceivedJoinRequestFromSniper();
+//    auction.announceClosed();
+//    application.showsSniperHasLostAuction();
+//  }
 
-  // @After
-  public void stopApplication() {
-    auction.stop();
-  }
+//  @After
+//  public void stopAuction() {
+//    auction.stop();
+//  }
+
+// @After
+//  public void stopApplication() {
+//    auction.stop();
+//  }
 }
