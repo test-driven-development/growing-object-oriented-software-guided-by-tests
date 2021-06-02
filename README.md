@@ -6,29 +6,38 @@
 
 #### use the following docker image:
 
-````
+```bash
 docker pull gizmotronic/openfire:4.4.4
 
-````
+```
 
 ___
 
 #### run it as follows:
 
-````
-docker run --name openfire -d --restart=always --publish 9090:9090 --publish 5222:5222 --publish 7777:7777 --volume ~/.openfire:/var/lib/openfire gizmotronic/openfire:4.4.4
-````
+```bash
+sudo docker run --name openfire -d --restart=always --publish 9090:9090 --publish 5222:5222 --publish 7777:7777 --volume ~/.openfire:/var/lib/openfire gizmotronic/openfire:4.4.4
+```
 
 ___
 
-#### once the server is running, configure the following accounts:
+#### logon to the administrator's portal in the browser:
 
-````
-sniper : sniper
-auction-item-54321 : auction
-auction-item-65432 :     auction
-````
+```bash
+localhost:9090
+```
 
+___
+
+#### for `Language Selection`, make your choice and, continue 
+___
+![(01) Language Selection](images/openfire-admin-(02)-Server-Settings.png)
+
+___
+
+#### for Language Selection, make your choice and, continue
+___
+![(02) Server Settings](images/openfire-admin-(02)-Server-Settings.png)
 ___
 
 
